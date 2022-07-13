@@ -5,6 +5,8 @@ import {
   UilWind,
   UilSun,
   UilSunset,
+  UilArrowUp,
+  UilArrowDown,
 } from "@iconscout/react-unicons";
 import { formatToLocalTime, iconUrlFromCode } from "../services/weatherService";
 
@@ -35,7 +37,7 @@ function TemperatureAndDetails({
         <div className="flex flex-col space-y-2">
           <div className="flex font-light text-sm items-center justify-center">
             <UilTemperature size={18} className="mr-1" />
-            Real fell:
+            Real feel:
             <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
@@ -70,14 +72,14 @@ function TemperatureAndDetails({
         </p>
         <p className="font-light">|</p>
 
-        <UilSun />
+        <UilArrowUp />
         <p className="font-light">
           High:{" "}
           <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
         </p>
         <p className="font-light">|</p>
 
-        <UilSun />
+        <UilArrowDown />
         <p className="font-light">
           Low:{" "}
           <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
